@@ -1,3 +1,12 @@
 * {
     background-color: steelblue;
 }
+
+#searchBar {
+    background-color: white;
+}
+
+.search-btn {
+    background-color: grey;
+    color: black; 
+}

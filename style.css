@@ -1,5 +1,36 @@
 * {
-    background-color: steelblue;
+    margin: 0; 
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100vh; 
+    width: 100vw; 
+}
+
+header {
+    text-align: center;
+    margin-top: 35vh; 
+}
+
+h1 {
+    /* font-family: 'Raleway', sans-serif; */
+    font-size: 75px;
+}
+
+h3 {
+    font-size: 25px; 
+    margin: 10px 0px; 
+}
+
+.container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 #searchBar {

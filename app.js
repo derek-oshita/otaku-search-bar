@@ -6,7 +6,7 @@ NEED TO UNDERSTAND WHY THE HTML IS NOT POPULATING IN THE UL ANIMELIST
 // HTML ELEMENTS 
 const searchBar = document.getElementById('searchBar');
 const searchButton = document.getElementsByClassName('search-btn'); 
-const animeList = document.getElementById('anime-list'); 
+const animeContainer = document.getElementById('anime-list'); 
 let animeData = []; 
 
 // DATA 
@@ -26,13 +26,15 @@ const loadData = async () => {
 const display = animeList => {
     const htmlString = animeList.map( series => {
         return `
-        <p>${series.title}</p>
+        <li>
+            <p>${series.title}</p>
+        </li>
         `
     })
     .join(''); 
-    animeList.innerHTML = htmlString; 
-    console.log('htmlString', htmlString)
-    console.log('animeList UL', animeList)
+    animeContainer.innerHTML = htmlString; 
+    // console.log('htmlString', htmlString)
+    // console.log('animeList UL', animeList)
 }
 
 // EVENT LISTENERS
@@ -44,8 +46,6 @@ searchBar.addEventListener('keyup', (e) => {
             anime.title.toLowerCase().includes(searchStr) ||
             // tags 
             anime.tags.includes(searchStr)
-            // // status
-            // anime.status
         )
     })
     // console.log(resultsList)

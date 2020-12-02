@@ -1,6 +1,12 @@
+/* 
+NEED TO UNDERSTAND WHY THE HTML IS NOT POPULATING IN THE UL ANIMELIST
+*/
+
+
 // HTML ELEMENTS 
 const searchBar = document.getElementById('searchBar');
 const searchButton = document.getElementsByClassName('search-btn'); 
+const animeList = document.getElementById('anime-list'); 
 let animeData = []; 
 
 // DATA 
@@ -8,8 +14,7 @@ const loadData = async () => {
     fetch('https://raw.githubusercontent.com/manami-project/anime-offline-database/master/anime-offline-database.json')
     .then(response => response.json())
     .then(data => {
-        animeData = data.data; 
-        // display goes here
+        animeData = data.data;
         display(animeData)
     })
     .catch(err => {
@@ -20,9 +25,14 @@ const loadData = async () => {
 // FUNCTIONS
 const display = animeList => {
     const htmlString = animeList.map( series => {
-        return `${series.title}`
+        return `
+        <p>${series.title}</p>
+        `
     })
-    console.log(htmlString)
+    .join(''); 
+    animeList.innerHTML = htmlString; 
+    console.log('htmlString', htmlString)
+    console.log('animeList UL', animeList)
 }
 
 // EVENT LISTENERS
@@ -34,9 +44,12 @@ searchBar.addEventListener('keyup', (e) => {
             anime.title.toLowerCase().includes(searchStr) ||
             // tags 
             anime.tags.includes(searchStr)
+            // // status
+            // anime.status
         )
     })
-    console.log(resultsList)
+    // console.log(resultsList)
+    display(resultsList)
 })
 
 loadData(); 

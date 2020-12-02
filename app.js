@@ -1,13 +1,40 @@
 /* 
-NEED TO UNDERSTAND WHY THE HTML IS NOT POPULATING IN THE UL ANIMELIST
+.addEventListener is showing up as not a function when added to searchButton; 
+something something it's being added to an html element before it's available 
 */
 
 
 // HTML ELEMENTS 
 const searchBar = document.getElementById('searchBar');
-const searchButton = document.getElementsByClassName('search-btn'); 
-const animeContainer = document.getElementById('anime-list'); 
+const searchButton = document.getElementById('search');
+const animeContainer = document.getElementById('anime-container'); 
 let animeData = []; 
+
+// EVENT LISTENERS
+// searchBar.addEventListener('keyup', (e) => {
+//     const searchStr = e.target.value.toLowerCase(); 
+//     const resultsList = animeData.filter( anime => {
+//         return (
+//             // title
+//             anime.title.toLowerCase().includes(searchStr) ||
+//             // tags 
+//             anime.tags.includes(searchStr)
+//         )
+//     })
+//     // console.log(resultsList)
+//     display(resultsList)
+// })
+
+searchButton.addEventListener('click', e => {
+    let userInput = searchBar.value.toLowerCase(); 
+    let resultsList = animeData.filter(anime => {
+        return (
+            anime.title.toLowerCase().includes(userInput) ||
+            anime.tags.includes(userInput)
+        )
+    })
+    display(resultsList)
+}); 
 
 // DATA 
 const loadData = async () => {
@@ -15,7 +42,7 @@ const loadData = async () => {
     .then(response => response.json())
     .then(data => {
         animeData = data.data;
-        display(animeData)
+        // display(animeData)
     })
     .catch(err => {
         console.log('Error: ', err)
@@ -24,10 +51,11 @@ const loadData = async () => {
 
 // FUNCTIONS
 const display = animeList => {
-    const htmlString = animeList.map( series => {
+    const htmlString = animeList.map(series => {
         return `
-        <li>
+        <li class="series-card">
             <p>${series.title}</p>
+            <img src="${series.thumbnail}"/>
         </li>
         `
     })
@@ -37,20 +65,7 @@ const display = animeList => {
     // console.log('animeList UL', animeList)
 }
 
-// EVENT LISTENERS
-searchBar.addEventListener('keyup', (e) => {
-    const searchStr = e.target.value.toLowerCase(); 
-    const resultsList = animeData.filter( anime => {
-        return (
-            // title
-            anime.title.toLowerCase().includes(searchStr) ||
-            // tags 
-            anime.tags.includes(searchStr)
-        )
-    })
-    // console.log(resultsList)
-    display(resultsList)
-})
+
 
 loadData(); 
 

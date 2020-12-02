@@ -20,6 +20,12 @@ header {
 h1 {
     /* font-family: 'Raleway', sans-serif; */
     font-size: 75px;
+    animation: fadeIn ease 5s; 
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 h3 {
@@ -27,17 +33,32 @@ h3 {
     margin: 10px 0px; 
 }
 
+input:focus {
+    outline: none; 
+}
+
+.divider {
+    width: 5px; 
+}
+
 .container {
     display: flex; 
     justify-content: center;
     align-items: center;
+    margin-top: 20px; 
 }
 
 #searchBar {
     background-color: white;
+    border-radius: 5px;
+    width: 25vw; 
+    height: 4.5vh; 
 }
 
 .search-btn {
     background-color: grey;
     color: black; 
+    border-radius: 5px;
+    height: 4.5vh; 
+    font-weight: bold; 
 }

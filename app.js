@@ -54,10 +54,7 @@ const display = animeList => {
     const htmlString = animeList.map(series => {
         return `
         <li class="series-card">
-            <p>${series.title}</p>
             <img src="${series.picture}"/>
-            <p>Episodes: ${series.episodes}</p>
-            <p>Released: ${series.animeSeason.year}</p>
         </li>
         `
     })

@@ -66,9 +66,6 @@ input:focus {
 }
 
 .series-card {
-    max-width: 25vw;
-    border: solid black 2px; 
-    border-radius: 5px; 
     text-align: center; 
 }
 

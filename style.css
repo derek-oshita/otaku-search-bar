@@ -31,6 +31,12 @@ input:focus {
     outline: none; 
 }
 
+#anime-container {
+    display: grid; 
+    list-style-type: none;
+    margin: 0 auto; 
+}
+
 .divider {
     width: 5px; 
 }
@@ -41,6 +47,8 @@ input:focus {
     align-items: center;
     margin-top: 20px; 
 }
+
+
 
 #searchBar {
     background-color: white;
@@ -55,4 +63,22 @@ input:focus {
     border-radius: 5px;
     height: 4.5vh; 
     font-weight: bold; 
+}
+
+.series-card {
+    max-width: 25vw;
+    border: solid black 2px; 
+    border-radius: 5px; 
+    text-align: center; 
+}
+
+.series-card p {
+    text-align: center; 
+    font-size: 30px; 
+    margin: 10px 0; 
+}
+
+.series-card > img {
+    /* width: 25vw;  */
+    max-height: 300px; 
 }

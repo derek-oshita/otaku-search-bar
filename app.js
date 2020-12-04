@@ -55,14 +55,14 @@ const display = animeList => {
         return `
         <li class="series-card">
             <p>${series.title}</p>
-            <img src="${series.thumbnail}"/>
+            <img src="${series.picture}"/>
+            <p>Episodes: ${series.episodes}</p>
+            <p>Released: ${series.animeSeason.year}</p>
         </li>
         `
     })
     .join(''); 
     animeContainer.innerHTML = htmlString; 
-    // console.log('htmlString', htmlString)
-    // console.log('animeList UL', animeList)
 }
 
 

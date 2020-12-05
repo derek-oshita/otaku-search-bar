@@ -7,7 +7,7 @@ something something it's being added to an html element before it's available
 // HTML ELEMENTS 
 const searchBar = document.getElementById('searchBar');
 const searchButton = document.getElementById('search');
-const animeContainer = document.getElementById('anime-container'); 
+const animeContainer = document.getElementById('anime-list'); 
 let animeData = []; 
 
 // EVENT LISTENERS

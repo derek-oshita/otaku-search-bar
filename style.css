@@ -31,10 +31,21 @@ input:focus {
     outline: none; 
 }
 
-#anime-container {
-    display: grid; 
+section {
+    margin-bottom: 30px; 
+}
+
+.anime-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+#anime-list {
+    /* display: grid;  */
     list-style-type: none;
-    margin: 0 auto; 
+    /* margin: 0 auto;  */
 }
 
 .divider {
@@ -53,7 +64,7 @@ input:focus {
 #searchBar {
     background-color: white;
     border-radius: 5px;
-    width: 25vw; 
+    width: 46vw; 
     height: 4.5vh; 
 }
 
@@ -78,4 +89,5 @@ input:focus {
 .series-card > img {
     /* width: 25vw;  */
     max-height: 300px; 
+    max-width: 150px; 
 }

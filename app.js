@@ -1,30 +1,10 @@
-/* 
-.addEventListener is showing up as not a function when added to searchButton; 
-something something it's being added to an html element before it's available 
-*/
-
-
 // HTML ELEMENTS 
 const searchBar = document.getElementById('searchBar');
 const searchButton = document.getElementById('search');
-const animeContainer = document.getElementById('anime-list'); 
+const animeContainer = document.getElementById('anime-gallery'); 
 let animeData = []; 
 
-// EVENT LISTENERS
-// searchBar.addEventListener('keyup', (e) => {
-//     const searchStr = e.target.value.toLowerCase(); 
-//     const resultsList = animeData.filter( anime => {
-//         return (
-//             // title
-//             anime.title.toLowerCase().includes(searchStr) ||
-//             // tags 
-//             anime.tags.includes(searchStr)
-//         )
-//     })
-//     // console.log(resultsList)
-//     display(resultsList)
-// })
-
+// EVENT LISTENER
 searchButton.addEventListener('click', e => {
     let userInput = searchBar.value.toLowerCase(); 
     let resultsList = animeData.filter(anime => {
@@ -42,7 +22,6 @@ const loadData = async () => {
     .then(response => response.json())
     .then(data => {
         animeData = data.data;
-        // display(animeData)
     })
     .catch(err => {
         console.log('Error: ', err)
@@ -53,16 +32,19 @@ const loadData = async () => {
 const display = animeList => {
     const htmlString = animeList.map(series => {
         return `
-        <li class="series-card">
-            <img src="${series.picture}"/>
-        </li>
+            <img class="anime-img" src="${series.picture}" />
         `
     })
     .join(''); 
     animeContainer.innerHTML = htmlString; 
 }
 
-
-
 loadData(); 
+
+/*
+inside of return statement for display: 
+        <li class="series-card">
+            <img src="${series.picture}"/>
+        </li>
+*/
 

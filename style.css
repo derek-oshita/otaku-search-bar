@@ -18,12 +18,11 @@ header {
 }
 
 h1 {
-    /* font-family: 'Raleway', sans-serif; */
-    font-size: 75px;
+    font-size: 4vw; 
 }
 
 h3 {
-    font-size: 25px; 
+    font-size: 1.5vw; 
     margin: 10px 0px; 
 }
 
@@ -35,22 +34,23 @@ section {
     margin-bottom: 30px; 
 }
 
-.anime-container {
+#anime-gallery {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+/* .anime-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap; 
-}
+} */
 
-#anime-list {
-    /* display: grid;  */
+/* #anime-list {
     list-style-type: none;
-    /* margin: 0 auto;  */
-}
-
-.divider {
-    width: 5px; 
-}
+} */
 
 .container {
     display: flex; 
@@ -59,24 +59,28 @@ section {
     margin-top: 20px; 
 }
 
-
+.divider {
+    width: 5px; 
+}
 
 #searchBar {
     background-color: white;
     border-radius: 5px;
-    width: 46vw; 
+    width: 25.5vw; 
     height: 4.5vh; 
 }
 
 .search-btn {
     background-color: grey;
-    color: black; 
+    color: white; 
     border-radius: 5px;
     height: 4.5vh; 
+    width: 5vw; 
     font-weight: bold; 
+    font-size: 1vw; 
 }
 
-.series-card {
+/* .series-card {
     text-align: center; 
 }
 
@@ -87,7 +91,21 @@ section {
 }
 
 .series-card > img {
-    /* width: 25vw;  */
     max-height: 300px; 
     max-width: 150px; 
+} */
+
+.anime-img {
+    margin: 15px; 
+    max-width: 150px; 
+    max-height: 300px; 
+    opacity: 0.9; 
+    transition: opacity 0.2s linear, transform 0.2s ease-in-out; 
+    border: 2px solid white; 
+}
+
+.anime-img:hover {
+    opacity: 1; 
+    transform: scale(1.25); 
+    cursor: pointer; 
 }

@@ -32,10 +32,8 @@ const loadData = async () => {
 const display = animeList => {
     const htmlString = animeList.map(series => {
         return `
-        <a href="${series.sources.filter(link => link.includes('myanimelist'))}">
             <img class="anime-img" src="${series.picture}" />
-        </a>
-            `
+        `
     })
     .join(''); 
     animeContainer.innerHTML = htmlString; 

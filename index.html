@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Otaku Search Bar</title>
     <!-- BOOTSTRAP CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- GOOGLE FONTS -->
@@ -13,32 +14,28 @@
     <!-- JS -->
     <script defer src="app.js"></script>
     <!-- BOOTSTRAP / POPPER JS -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Otaku Search</h5>
+
+          <a href="https://github.com/manami-project/anime-offline-database" class="text-muted nav-link">API</a>
+
+          <a href="https://github.com/derek-oshita/otaku-search-bar" class="text-muted nav-link">GitHub</a>
         </div>
-      </nav>  
+    </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
           
         <!-- HEADER -->
         <header>
@@ -55,7 +52,8 @@
             </div>
         </section>
         <!-- ANIME LIST -->
-        <section>
+            <!-- <ul id="anime-list"> -->
+                <!-- <div class="anime-container"> -->
                     <!-- SAMPLE CARD -->
                     <!-- <li class="series-card">
                         <img src="https://cdn.myanimelist.net/images/anime/9/9453.jpg"/>
@@ -69,9 +67,8 @@
                     <li class="series-card">
                         <img src="https://cdn.myanimelist.net/images/anime/9/9453.jpg"/>
                     </li> -->
-                    <!-- <a href="https://www.w3schools.com">
-                        <img class="anime-img" src="https://cdn.myanimelist.net/images/anime/9/9453.jpg" alt="">
-                    </a>
+<!-- 
+                    <img class="anime-img" src="https://cdn.myanimelist.net/images/anime/9/9453.jpg" alt="">
                     <img class="anime-img" src="https://cdn.myanimelist.net/images/anime/9/9453.jpg" alt="">
                     <img class="anime-img" src="https://cdn.myanimelist.net/images/anime/9/9453.jpg" alt=""> -->
 
@@ -80,6 +77,5 @@
 
                         </div>
                     </div>
-        </section>
 </body>
 </html>

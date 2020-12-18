@@ -32,7 +32,7 @@ const loadData = async () => {
 const display = animeList => {
     const htmlString = animeList.map(series => {
         return `
-            <img class="anime-img" src="${series.picture}" />
+            <img class="anime-img rounded" src="${series.picture}" />
         `
     })
     .join(''); 
@@ -41,21 +41,5 @@ const display = animeList => {
 
 loadData(); 
 
-/*
-inside of return statement for display: 
-        <li class="series-card">
-            <img src="${series.picture}"/>
-        </li>
-*/
-
-/*
-/* 
-answered = [24, 27, 0]
-needed =   [51, 52, 100]
-
-
-
-
-*/
 
 

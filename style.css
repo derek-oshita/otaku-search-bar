@@ -35,21 +35,18 @@ UNIVERSAL
 }
 
 body {
-    background-color: #ffffff;
-    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-    background-repeat: no-repeat; 
-    background-size: cover; 
     height: 100vh; 
     width: 100vw; 
+    background-color: var(--bs-gray-dark); 
+}
+
+a {
+    text-decoration: none;
 }
 
 /************************************************************************************** 
 NAVBAR
 */
-
-h2 {
-    font-size: 2vw; 
-}
 
 .navbar-toggler {
     background-color: #F50A54; 
@@ -58,10 +55,6 @@ h2 {
 .nav-link:hover {
     color: #F50A54; 
 }
-
-/* a:hover {
-    color: var(--bs-blue);
-} */
 
 /************************************************************************************** 
 COMPONENT CONTAINER
@@ -95,6 +88,7 @@ h1 {
 }
 
 h2 {
+    font-size: 2vw; 
     color: #F50A54; 
 }
 
@@ -113,23 +107,6 @@ article {
     width: 100vw; 
 }
 
-/* #anime-gallery {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center; 
-    flex-wrap: wrap; 
-} */
-
-/* .anime-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap; 
-} */
-
-/* #anime-list {
-    list-style-type: none;
-} */
 
 .container {
     display: flex; 
@@ -174,6 +151,10 @@ article {
     max-width: 150px; 
 } */
 
+/************************************************************************************** 
+ANIME LIST
+*/
+
 .anime-img {
     margin: 15px; 
     max-width: 150px; 
@@ -188,6 +169,31 @@ article {
     transform: scale(1.25); 
     cursor: pointer; 
 }
+
+.anime-list {
+    margin: 0 auto; 
+    width: 100vw; 
+    background-color: var(--bs-gray-dark)
+}
+
+
+#anime-gallery {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+/* .anime-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+} */
+
+/* #anime-list {
+    list-style-type: none;
+} */
 
 /************************************************************************************** 
 FOOTER

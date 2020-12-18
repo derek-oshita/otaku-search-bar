@@ -9,8 +9,8 @@ searchButton.addEventListener('click', e => {
     let userInput = searchBar.value.toLowerCase(); 
     let resultsList = animeData.filter(anime => {
         return (
-            anime.title.toLowerCase().includes(userInput) ||
-            anime.tags.includes(userInput)
+            (anime.title.toLowerCase().includes(userInput) ||
+            anime.tags.includes(userInput))
         )
     })
     display(resultsList)
@@ -49,4 +49,15 @@ inside of return statement for display:
             <img src="${series.picture}"/>
         </li>
 */
+
+/*
+/* 
+answered = [24, 27, 0]
+needed =   [51, 52, 100]
+
+
+
+
+*/
+
 

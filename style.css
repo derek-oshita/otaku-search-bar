@@ -1,3 +1,7 @@
+/************************************************************************************** 
+UNIVERSAL
+*/
+
 * {
     margin: 0; 
     font-family: 'Raleway', sans-serif;
@@ -12,6 +16,20 @@ body {
     width: 100vw; 
 }
 
+/************************************************************************************** 
+NAVBAR
+*/
+
+h2 {
+    color: white; 
+    font-size: 2vw; 
+}
+
+/************************************************************************************** 
+HEADER ABOVE SEARCH BAR
+*/
+
+
 header {
     text-align: center;
     margin-top: 35vh; 
@@ -21,25 +39,27 @@ h1 {
     font-size: 4vw; 
 }
 
-h3 {
-    font-size: 1.5vw; 
-    margin: 10px 0px; 
-}
+/************************************************************************************** 
+SEARCH BAR
+*/
 
 input:focus {
     outline: none; 
 }
 
 section {
-    margin-bottom: 30px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100vw; 
 }
 
-#anime-gallery {
+/* #anime-gallery {
     display: flex; 
     flex-direction: row; 
     justify-content: center; 
     flex-wrap: wrap; 
-}
+} */
 
 /* .anime-container {
     display: flex;

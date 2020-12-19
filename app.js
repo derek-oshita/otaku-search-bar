@@ -34,14 +34,14 @@ const display = animeList => {
     console.log(animeList)
     const htmlString = animeList.map(series => {
             return `
-                <img class="anime-img rounded" src="${series.picture}" />
-            `
+                <a target="_blank" rel="noopener noreferrer" href="${series.sources[0]}">
+                        <img class="anime-img rounded" src="${series.picture}" title="${series.title}" />
+                </a>`
     })
     .join(''); 
     animeContainer.innerHTML = htmlString; 
 }
 
 loadData(); 
-
 
 

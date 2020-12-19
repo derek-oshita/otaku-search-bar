@@ -1,0 +1,19 @@
+{
+  "name": "otaku-search-bar",
+  "version": "1.0.0",
+  "description": "A simple search bar for anime lovers. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derek-oshita/otaku-search-bar.git"
+  },
+  "author": "Derek Oshita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derek-oshita/otaku-search-bar/issues"
+  },
+  "homepage": "https://github.com/derek-oshita/otaku-search-bar#readme"
+}

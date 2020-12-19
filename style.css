@@ -164,6 +164,19 @@ ANIME LIST
     border: 2px solid white; 
 }
 
+.img-wrap {
+    color: white; 
+    position: relative; 
+    margin: 15px; 
+    max-width: 150px; 
+    max-height: 300px; 
+}
+
+.img-wrap:hover .img-description {
+    visibility: visible; 
+    opacity: 1; 
+}
+
 .anime-img:hover {
     opacity: 1; 
     transform: scale(1.25); 
@@ -173,12 +186,13 @@ ANIME LIST
 .anime-list {
     margin: 0 auto; 
     width: 100vw; 
-    background-color: var(--bs-gray-dark)
+    background-color: var(--bs-gray-dark); 
 }
 
 
 #anime-gallery {
-    margin-bottom: 40px; 
+    /* margin-top: 10px;  */
+    margin-bottom: 35px; 
     display: flex; 
     flex-direction: row; 
     justify-content: center; 

@@ -6,14 +6,14 @@ let animeData = [];
 
 // EVENT LISTENER
 searchButton.addEventListener('click', e => {
-    let userInput = searchBar.value.toLowerCase(); 
-    let resultsList = animeData.filter(anime => {
-        return (
-            (anime.title.toLowerCase().includes(userInput) ||
-            anime.tags.includes(userInput))
-        )
-    })
-    display(resultsList)
+        let userInput = searchBar.value.toLowerCase(); 
+        let resultsList = animeData.filter(anime => {
+            return (
+                (anime.title.toLowerCase().includes(userInput) ||
+                anime.tags.includes(userInput))
+            )
+        })
+        display(resultsList); 
 }); 
 
 // DATA 
@@ -30,10 +30,12 @@ const loadData = async () => {
 
 // FUNCTIONS
 const display = animeList => {
+    // animeList = animeList.filter( anime => anime.sources[0])
+    console.log(animeList)
     const htmlString = animeList.map(series => {
-        return `
-            <img class="anime-img rounded" src="${series.picture}" />
-        `
+            return `
+                <img class="anime-img rounded" src="${series.picture}" />
+            `
     })
     .join(''); 
     animeContainer.innerHTML = htmlString; 

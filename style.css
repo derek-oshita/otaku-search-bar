@@ -178,6 +178,7 @@ ANIME LIST
 
 
 #anime-gallery {
+    margin-bottom: 40px; 
     display: flex; 
     flex-direction: row; 
     justify-content: center; 
@@ -201,9 +202,10 @@ FOOTER
 
 #footer {
     text-align: center; 
+    max-height: 4vh; 
 }
 
 .container-fluid p {
     color: var(--bs-primary); 
-    padding-top: 12px; 
+    padding-top: 2px; 
 }

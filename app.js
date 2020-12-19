@@ -35,7 +35,12 @@ const display = animeList => {
     const htmlString = animeList.map(series => {
             return `
                 <a target="_blank" rel="noopener noreferrer" href="${series.sources[0]}">
+                    <div class="img-container">
                         <img class="anime-img rounded" src="${series.picture}" title="${series.title}" />
+                        <div class="overlay">
+                            <div class="text">${series.title}</div>
+                        </div>
+                    </div>
                 </a>`
     })
     .join(''); 

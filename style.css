@@ -164,24 +164,47 @@ ANIME LIST
     border: 2px solid white; 
 }
 
-.img-wrap {
-    color: white; 
-    position: relative; 
+.img-container {
     margin: 15px; 
+    position: relative; 
     max-width: 150px; 
     max-height: 300px; 
 }
 
-.img-wrap:hover .img-description {
-    visibility: visible; 
+.overlay {
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    max-height: 300px; 
+    max-width: 150px; 
+    /* width: 12vw;  
+    height: 25vh;      */
+    opacity: 0; 
+    transition: .5s ease; 
+    background-color: white; 
+    margin-left: 15px; 
+    margin-top: 12px; 
+    border-radius: 8px; 
+}
+
+.img-container:hover .overlay {
     opacity: 1; 
 }
 
-.anime-img:hover {
+.text {
+    color: red; 
+    font-size: 20px; 
+    position: absolute; 
+    text-align: center; 
+}
+
+/* .anime-img:hover {
     opacity: 1; 
     transform: scale(1.25); 
     cursor: pointer; 
-}
+} */
 
 .anime-list {
     margin: 0 auto; 

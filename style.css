@@ -157,8 +157,10 @@ ANIME LIST
 
 .anime-img {
     margin: 15px; 
-    max-width: 150px; 
-    max-height: 300px; 
+    /* max-width: 150px; 
+    max-height: 300px;  */
+    width: 200px; 
+    height: 300px; 
     opacity: 0.9; 
     transition: opacity 0.2s linear, transform 0.2s ease-in-out; 
     border: 2px solid white; 
@@ -167,8 +169,10 @@ ANIME LIST
 .img-container {
     margin: 15px; 
     position: relative; 
-    max-width: 150px; 
-    max-height: 300px; 
+    width: 200px; 
+    height: 300px; 
+    /* max-width: 150px; 
+    max-height: 300px;  */
 }
 
 .overlay {
@@ -177,15 +181,17 @@ ANIME LIST
     bottom: 0; 
     left: 0; 
     right: 0; 
-    max-height: 300px; 
-    max-width: 150px; 
-    /* width: 12vw;  
-    height: 25vh;      */
+    /* max-height: 300px; 
+    max-width: 150px;  */
+    /* width: 12vw;   */
+    /* height: 25vh;      */
+    height: 100%; 
+    width: 100%; 
     opacity: 0; 
     transition: .5s ease; 
     background-color: white; 
     margin-left: 15px; 
-    margin-top: 12px; 
+    margin-top: 14px; 
     border-radius: 8px; 
 }
 

@@ -50,11 +50,12 @@ const display = animeList => {
     })
     .join(''); 
     const backBtnString = `
-    <a href="#navbarToggleExternalContent">
     <section class="back-container">
-        <button class="back-btn btn">Back To Top</button>
-    </section>
-    </a>`
+        <a href="#top">
+            <button class="back-btn btn">Back To Top</button>
+        </a>
+    </section>        
+        `
     animeContainer.innerHTML = animeString; 
     backBtnDiv.innerHTML = backBtnString; 
 }

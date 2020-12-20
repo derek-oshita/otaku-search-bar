@@ -226,10 +226,11 @@ BACK TO TOP BUTTON AND CONTAINER
 
 .back-container {
     width: 100vw; 
-    height: 10vh; 
+    height: 12vh; 
     display: flex; 
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    /* margin-bottom: 10vh;  */
 }
 
 .back-btn {

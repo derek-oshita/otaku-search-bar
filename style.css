@@ -70,8 +70,6 @@ COMPONENT CONTAINER
     background-size: cover; 
 }
 
-
-
 /************************************************************************************** 
 HEADER ABOVE SEARCH BAR
 */
@@ -136,27 +134,11 @@ article {
     font-size: 1vw; 
 }
 
-/* .series-card {
-    text-align: center; 
-}
-
-.series-card p {
-    text-align: center; 
-    font-size: 30px; 
-    margin: 10px 0; 
-}
-
-.series-card > img {
-    max-height: 300px; 
-    max-width: 150px; 
-} */
-
 /************************************************************************************** 
 ANIME LIST
 */
 
 .anime-img {
-
     width: 200px; 
     height: 300px; 
     opacity: 0.9; 
@@ -169,8 +151,6 @@ ANIME LIST
     position: relative; 
     width: 200px; 
     height: 300px; 
-    /* max-width: 150px; 
-    max-height: 300px;  */
 }
 
 .overlay {
@@ -187,20 +167,35 @@ ANIME LIST
     width: 100%; 
     opacity: 0; 
     transition: .5s ease; 
-    background-color: white; 
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
     /* margin-left: 15px; 
     margin-top: 14px;  */
-    border-radius: 8px; 
+    border-radius: 3px; 
+    /* display: block;  */
 }
 
 .img-container:hover .overlay {
     opacity: 1; 
 }
 
-.text {
-    color: red; 
-    font-size: 20px; 
-    position: absolute; 
+.thumbnail {
+    width: 20vw; 
+    height: 10vh; 
+}
+
+.title {
+    /* color: #F50A54; */
+    color: white; 
+    font-size: 15px; 
+    /* position: absolute;  */
+    text-align: center; 
+    padding: 4vh 1vw 0 1vw; 
+
+}
+
+.meta {
+    color: #F50A54; 
     text-align: center; 
 }
 
@@ -218,24 +213,12 @@ ANIME LIST
 
 
 #anime-gallery {
-    /* margin-top: 10px;  */
     margin-bottom: 35px; 
     display: flex; 
     flex-direction: row; 
     justify-content: center; 
     flex-wrap: wrap; 
 }
-
-/* .anime-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap; 
-} */
-
-/* #anime-list {
-    list-style-type: none;
-} */
 
 /************************************************************************************** 
 FOOTER

@@ -38,7 +38,10 @@ const display = animeList => {
                     <div class="img-container">
                         <img class="anime-img rounded" src="${series.picture}" title="${series.title}" />
                         <div class="overlay">
-                            <div class="text">${series.title}</div>
+                            <p class="title">${series.title}</p>
+                            <p class="meta">${series.animeSeason.year}</>
+                            <p class="meta">${series.tags[0]}</>
+                            <p class="meta">Episodes: ${series.episodes}</>
                         </div>
                     </div>
                 </a>`

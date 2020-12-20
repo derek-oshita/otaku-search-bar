@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Otaku Search Bar</title>
     <!-- BOOTSTRAP CSS -->
-    <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- ANIMATE.STYLE CDN -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- GOOGLE FONTS -->
@@ -14,18 +18,18 @@
     <!-- JS -->
     <script defer src="app.js"></script>
     <!-- BOOTSTRAP / POPPER JS -->
-<!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!-- NAVBAR -->
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
-          <h5 class="text-white h4">Otaku Search</h5>
+          <h5 class="text-white h4 animate__animated animate__fadeIn">Otaku Search</h5>
 
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/manami-project/anime-offline-database" class="text-muted nav-link">API</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/manami-project/anime-offline-database" class="animate__animated animate__fadeIn text-muted nav-link">API</a>
 
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/derek-oshita/otaku-search-bar" class="text-muted nav-link">GitHub</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/derek-oshita/otaku-search-bar" class="animate__animated animate__fadeIn text-muted nav-link">GitHub</a>
         </div>
     </div>
       </div>
@@ -43,17 +47,17 @@
         <section>
             <!-- HEADER -->
             <header>
-                <h1>Otaku Search</h1>
-                <h2>Discover New Anime</h2>
+                <h1 class="animate__animated animate__fadeIn animate__delay-1s">Otaku Search</h1>
+                <h2 class="animate__animated animate__fadeInUp animate__delay-2s">Discover New Anime</h2>
             </header>
             <!-- SEARCH BAR -->
             <article>
                 <div class="container">
                     <!-- SEARCH BAR -->
-                    <input type="search" name="searchBar" id="searchBar" placeholder="Hajime..." />
+                    <input class="animate__animated animate__fadeInLeft animate__delay-1s" type="search" name="searchBar" id="searchBar" placeholder="Hajime..." />
                     <div class="divider"></div>
                     <!-- SEARCH BUTTON -->
-                    <button id="search" class="search-btn btn">Search</button>
+                    <button id="search" class="search-btn btn animate__animated animate__fadeInRight animate__delay-1s">Search</button>
                 </div>
             </article>
         </section>

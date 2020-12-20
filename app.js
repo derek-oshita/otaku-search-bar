@@ -2,6 +2,7 @@
 const searchBar = document.getElementById('searchBar');
 const searchButton = document.getElementById('search');
 const animeContainer = document.getElementById('anime-gallery'); 
+const backBtnDiv = document.getElementById('back-btn-div'); 
 let animeData = []; 
 
 // EVENT LISTENER
@@ -32,7 +33,7 @@ const loadData = async () => {
 const display = animeList => {
     // animeList = animeList.filter( anime => anime.sources[0])
     console.log(animeList)
-    const htmlString = animeList.map(series => {
+    const animeString = animeList.map(series => {
             return `
                 <a target="_blank" rel="noopener noreferrer" href="${series.sources[0]}">
                     <div class="img-container">
@@ -44,10 +45,18 @@ const display = animeList => {
                             <p class="meta">Episodes: ${series.episodes}</>
                         </div>
                     </div>
-                </a>`
+                </a>           
+                `
     })
     .join(''); 
-    animeContainer.innerHTML = htmlString; 
+    const backBtnString = `
+    <a href="#navbarToggleExternalContent">
+    <section class="back-container">
+        <button class="back-btn btn">Back To Top</button>
+    </section>
+    </a>`
+    animeContainer.innerHTML = animeString; 
+    backBtnDiv.innerHTML = backBtnString; 
 }
 
 loadData(); 

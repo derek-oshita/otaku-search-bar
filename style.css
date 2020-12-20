@@ -221,6 +221,28 @@ ANIME LIST
 }
 
 /************************************************************************************** 
+BACK TO TOP BUTTON AND CONTAINER    
+*/
+
+.back-container {
+    width: 100vw; 
+    height: 10vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.back-btn {
+    background-color: #F50A54;
+    color: white; 
+    border-radius: 5px;
+    height: 4.5vh; 
+    width: 8vw; 
+    font-weight: bold; 
+    font-size: 1vw;  
+}
+
+/************************************************************************************** 
 FOOTER
 */
 

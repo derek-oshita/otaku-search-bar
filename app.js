@@ -22,9 +22,9 @@ searchButton.addEventListener('click', e => {
         handleSearch(); 
 });
 
-searchButton.addEventListener('keypress', e => {
-    if (e.key === 'Enter') {
-        console.log('SUP FOO')
+searchBar.addEventListener('keyup', e => {
+    if (e.keyCode === 13) {
+        handleSearch(); 
     }
 }); 
 

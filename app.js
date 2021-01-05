@@ -5,18 +5,6 @@ const animeContainer = document.getElementById('anime-gallery');
 const backBtnDiv = document.getElementById('back-btn-div'); 
 let animeData = []; 
 
-// EVENT LISTENER
-searchButton.addEventListener('click', e => {
-        let userInput = searchBar.value.toLowerCase(); 
-        let resultsList = animeData.filter(anime => {
-            return (
-                (anime.title.toLowerCase().includes(userInput) ||
-                anime.tags.includes(userInput))
-            )
-        })
-        display(resultsList); 
-}); 
-
 // DATA 
 const loadData = async () => {
     fetch('https://raw.githubusercontent.com/manami-project/anime-offline-database/master/anime-offline-database.json')
@@ -28,6 +16,17 @@ const loadData = async () => {
         console.log('Error: ', err)
     })
 }; 
+
+// EVENT LISTENER
+searchButton.addEventListener('click', e => {
+        handleSearch(); 
+});
+
+searchButton.addEventListener('keypress', e => {
+    if (e.key === 'Enter') {
+        console.log('SUP FOO')
+    }
+}); 
 
 // FUNCTIONS
 const display = animeList => {
@@ -58,6 +57,17 @@ const display = animeList => {
         `
     animeContainer.innerHTML = animeString; 
     backBtnDiv.innerHTML = backBtnString; 
+}
+
+const handleSearch = () => {
+    let userInput = searchBar.value.toLowerCase(); 
+    let resultsList = animeData.filter(anime => {
+        return (
+            (anime.title.toLowerCase().includes(userInput) ||
+            anime.tags.includes(userInput))
+        )
+    })
+    display(resultsList); 
 }
 
 loadData(); 

@@ -1,6 +1,6 @@
 ## Otaku Search
 
-Link to application: (coming soon)1
+Link to application: (coming soon)
 
 During my time at General Assembly, my friend Sky and I used to have an inside joke about search bars. Being the junior developers we were, we greatly underestimated the amount of time and effort it would take to build one. During the design phase of a group project, we played around with the idea of building one and saved it until the very last minute. 
 

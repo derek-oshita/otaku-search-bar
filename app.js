@@ -51,7 +51,7 @@ const display = animeList => {
     const backBtnString = `
     <section class="back-container">
         <a href="#top">
-            <button class="back-btn btn">Back To Top</button>
+            <button id="back-to-top" class="back-btn btn">Back To Top</button>
         </a>
     </section>        
         `

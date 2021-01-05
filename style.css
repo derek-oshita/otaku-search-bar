@@ -261,7 +261,11 @@ FOOTER
 MEADIA QUERY    
 */
 
-@media (max-width: 414px) {
+@media (max-width: 414px) { 
+    * {
+        margin: 0; 
+        padding: 0; 
+    }
     h1 {
         font-size: 50px; 
     }
@@ -275,11 +279,16 @@ MEADIA QUERY
         width: 20vw; 
         font-size: 15px; 
     }
+    #back-to-top {
+        width: 40vw; 
+        font-size: 15px; 
+    }
     .component-container {
         height: 95vh; 
         background-image: url('./images/gon_iphone_background.jpg'); 
     }
     #footer {
         height: 10vh; 
+        width: 100vw; 
     }
 }

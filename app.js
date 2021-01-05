@@ -70,6 +70,7 @@ const handleSearch = () => {
     display(resultsList); 
 }
 
+// LOAD DATA
 loadData(); 
 
 

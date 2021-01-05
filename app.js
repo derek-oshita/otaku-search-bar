@@ -17,7 +17,7 @@ const loadData = async () => {
     })
 }; 
 
-// EVENT LISTENER
+// EVENT LISTENERS
 searchButton.addEventListener('click', e => {
         handleSearch(); 
 });
@@ -30,8 +30,6 @@ searchBar.addEventListener('keyup', e => {
 
 // FUNCTIONS
 const display = animeList => {
-    // animeList = animeList.filter( anime => anime.sources[0])
-    console.log(animeList)
     const animeString = animeList.map(series => {
             return `
                 <a target="_blank" rel="noopener noreferrer" href="${series.sources[0]}">

@@ -76,13 +76,11 @@ HEADER ABOVE SEARCH BAR
 
 header {
     text-align: center;
-    /* margin-top: 35vh;  */
 }
 
 h1 {
     font-size: 5vw; 
     color: #F50A54; 
-    /* color: var(--bs-blue); */
 }
 
 h2 {
@@ -159,20 +157,14 @@ ANIME LIST
     bottom: 0; 
     left: 0; 
     right: 0; 
-    /* max-height: 300px; 
-    max-width: 150px;  */
-    /* width: 12vw;   */
-    /* height: 25vh;      */
+
     height: 100%; 
     width: 100%; 
     opacity: 0; 
     transition: .5s ease; 
     background-color: #485461;
     background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
-    /* margin-left: 15px; 
-    margin-top: 14px;  */
     border-radius: 3px; 
-    /* display: block;  */
 }
 
 .img-container:hover .overlay {
@@ -185,10 +177,8 @@ ANIME LIST
 }
 
 .title {
-    /* color: #F50A54; */
     color: white; 
     font-size: 15px; 
-    /* position: absolute;  */
     text-align: center; 
     padding: 4vh 1vw 0 1vw; 
 
@@ -198,12 +188,6 @@ ANIME LIST
     color: #F50A54; 
     text-align: center; 
 }
-
-/* .anime-img:hover {
-    opacity: 1; 
-    transform: scale(1.25); 
-    cursor: pointer; 
-} */
 
 .anime-list {
     margin: 0 auto; 
@@ -229,8 +213,6 @@ BACK TO TOP BUTTON AND CONTAINER
     height: 12vh; 
     display: flex; 
     justify-content: center;
-    /* align-items: center; */
-    /* margin-bottom: 10vh;  */
 }
 
 .back-btn {

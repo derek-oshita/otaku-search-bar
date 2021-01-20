@@ -65,6 +65,7 @@ const handleSearch = () => {
             anime.tags.includes(userInput))
         )
     })
+    window.location = '#anime-gallery'; 
     display(resultsList); 
 }
 

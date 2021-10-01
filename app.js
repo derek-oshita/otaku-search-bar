@@ -1,37 +1,40 @@
-// HTML ELEMENTS 
-const searchBar = document.getElementById('searchBar');
-const searchButton = document.getElementById('search');
-const animeContainer = document.getElementById('anime-gallery'); 
-const backBtnDiv = document.getElementById('back-btn-div'); 
-let animeData = []; 
+// HTML ELEMENTS
+const searchBar = document.getElementById("searchBar");
+const searchButton = document.getElementById("search");
+const animeContainer = document.getElementById("anime-gallery");
+const backBtnDiv = document.getElementById("back-btn-div");
+let animeData = [];
 
-// DATA 
+// DATA
 const loadData = async () => {
-    fetch('https://raw.githubusercontent.com/manami-project/anime-offline-database/master/anime-offline-database.json')
-    .then(response => response.json())
-    .then(data => {
-        animeData = data.data;
+  fetch(
+    "https://raw.githubusercontent.com/manami-project/anime-offline-database/master/anime-offline-database.json"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      animeData = data.data;
     })
-    .catch(err => {
-        console.log('Error: ', err)
-    })
-}; 
+    .catch((err) => {
+      console.log("Error: ", err);
+    });
+};
 
 // EVENT LISTENERS
-searchButton.addEventListener('click', e => {
-        handleSearch(); 
+searchButton.addEventListener("click", (e) => {
+  handleSearch();
 });
 
-searchBar.addEventListener('keyup', e => {
-    if (e.keyCode === 13) {
-        handleSearch(); 
-    }
-}); 
+searchBar.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    handleSearch();
+  }
+});
 
 // FUNCTIONS
-const display = animeList => {
-    const animeString = animeList.map(series => {
-            return `
+const display = (animeList) => {
+  const animeString = animeList
+    .map((series) => {
+      return `
                 <a target="_blank" rel="noopener noreferrer" href="${series.sources[0]}">
                     <div class="img-container">
                         <img class="anime-img rounded" src="${series.picture}" title="${series.title}" />
@@ -43,33 +46,32 @@ const display = animeList => {
                         </div>
                     </div>
                 </a>           
-                `
+                `;
     })
-    .join(''); 
-    const backBtnString = `
+    .join("");
+  const backBtnString = `
     <section class="back-container">
         <a href="#top">
             <button id="back-to-top" class="back-btn btn">Back To Top</button>
         </a>
     </section>        
-        `
-    animeContainer.innerHTML = animeString; 
-    backBtnDiv.innerHTML = backBtnString; 
-}
+        `;
+  animeContainer.innerHTML = animeString;
+  backBtnDiv.innerHTML = backBtnString;
+};
 
 const handleSearch = () => {
-    let userInput = searchBar.value.toLowerCase(); 
-    let resultsList = animeData.filter(anime => {
-        return (
-            (anime.title.toLowerCase().includes(userInput) ||
-            anime.tags.includes(userInput))
-        )
-    })
-    window.location = '#anime-gallery'; 
-    display(resultsList); 
-}
+  let userInput = searchBar.value.toLowerCase();
+  let resultsList = animeData.filter((anime) => {
+    return (
+      (anime.title.toLowerCase().includes(userInput) ||
+        anime.tags.includes(userInput)) &&
+      !anime.tags.includes("hentai")
+    );
+  });
+  display(resultsList);
+  window.location = "#anime-gallery";
+};
 
 // LOAD DATA
-loadData(); 
-
-
+loadData();
